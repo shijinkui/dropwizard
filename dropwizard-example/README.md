@@ -22,7 +22,7 @@ your application for the first time.
 * The `PersonResource` and `PeopleResource` are the REST resource which use the PersonDAO to retrieve data from the database, note the injection
 of the PersonDAO in their constructors.
 
-As with all the modules the db example is wired up in the `initialize` function of the `HelloWorldService`.
+As with all the modules the db example is wired up in the `initialize` function of the `HelloWorldApplication`.
 
 # Running The Application
 
@@ -39,3 +39,12 @@ To test the example application run the following commands.
 * To run the server run.
 
         java -jar target/dropwizard-example-0.7.0-SNAPSHOT.jar server example.yml
+
+* To hit the Hello World example (hit refresh a few times).
+
+	http://localhost:8080/hello-world
+
+* To post data into the application.
+
+	curl -H "Content-Type: application/json" -X POST -d '{"fullName":"Other Person","jobTitle":"Other Title"}' http://localhost:8080/people
+	open http://localhost:8080/people

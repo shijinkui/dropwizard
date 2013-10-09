@@ -1,7 +1,7 @@
 package com.example.helloworld.resources;
 
 import com.google.common.base.Charsets;
-import com.yammer.dropwizard.views.View;
+import io.dropwizard.views.View;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
